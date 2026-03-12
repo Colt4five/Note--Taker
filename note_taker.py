@@ -9,7 +9,7 @@ import os
 import subprocess
 
 # Set your OpenAI API key
-openai.api_key = "YOUR_OPENAI_API_KEY"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def download_audio(video_url, output_file="audio.mp3"):
     yt = YouTube(video_url)
@@ -61,3 +61,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
